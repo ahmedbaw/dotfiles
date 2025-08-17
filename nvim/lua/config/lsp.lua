@@ -1,10 +1,11 @@
--- ~/.config/nvim/lua/plugins/lsp.lua
+-- ~/.config/nvim/lua/config/lsp.lua
 
 local function setup_lsp()
   -- Mason for LSP management
-  require('mason').setup()
-  require('mason-lspconfig').setup({
-    ensure_installed = { 'rust_analyzer' }, -- Add other LSPs here
+  require('mason').setup({})
+
+  require("mason-lspconfig").setup({
+    ensure_installed = { "gopls", "typescript-language-server", "svelte-language-server", "sqlls" },
   })
 
   -- General LSP configuration

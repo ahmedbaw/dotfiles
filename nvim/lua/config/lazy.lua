@@ -21,7 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   spec = {
     { import = 'plugins' },      -- Load main plugins from lua/plugins/init.lua
-    { import = 'plugins.rust' }, -- Load Rust plugins from lua/plugins/rust.lua
   },
   defaults = {
     lazy = false, -- All plugins are loaded immediately (better for LSP setup)
